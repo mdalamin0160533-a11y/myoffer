@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Landing Page</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      padding: 10px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .btn {
+      display: block;
+      background: red;
+      color: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* Popup */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .close {
+      color: red;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Image 1 -->
+  <a href="https://link1.com" target="_blank">
+    <img src="image1.jpg">
+  </a>
+
+  <!-- Image 2 -->
+  <a href="https://link2.com" target="_blank">
+    <img src="image2.jpg">
+  </a>
+
+  <!-- Button -->
+  <a href="https://main-offer.com" class="btn">👉 Click Now</a>
+
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">✖</span>
+    <h2>🔥 Special Offer</h2>
+    <p>Click below to continue</p>
+    <a href="https://offer-link.com" class="btn">Go Now</a>
+  </div>
+</div>
+
+<script>
+  // Show popup after 3 sec
+  setTimeout(() => {
+    document.getElementById('popup').style.display = 'flex';
+  }, 3000);
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+
+  // Auto redirect after 10 sec
+  setTimeout(() => {
+    window.location.href = "https://your-link.com";
+  }, 10000);
+</script>
+
+</body>
+</html>
